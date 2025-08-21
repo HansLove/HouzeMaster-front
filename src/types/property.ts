@@ -48,7 +48,7 @@ export interface Property {
   lead_form_url: string;
 }
 
-export interface PropertyCard {
+export interface IPropertyCard {
   id: string;
   image: string;
   authorImage: string;

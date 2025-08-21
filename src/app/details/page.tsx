@@ -1,6 +1,6 @@
 import { FaBath, FaCar, FaBed, FaDumbbell, FaParking } from 'react-icons/fa'; 
 import Image from 'next/image'; 
-import HoseImages from '../components/houseimages';
+// import HoseImages from '../components/houseimages';
 
 const PropertyDetails = () => {
   return (
@@ -13,6 +13,8 @@ const PropertyDetails = () => {
           layout="fill"
           objectFit="cover"
           className="rounded-xl shadow-lg"
+          width={1920}
+          height={1080}
         />
       </div>
 
@@ -60,7 +62,7 @@ const PropertyDetails = () => {
             
             </div>
           </div>
-         <HoseImages/>
+         {/* <HoseImages/> */}
 
         </div>
 

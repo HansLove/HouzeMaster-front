@@ -8,6 +8,7 @@ export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
   const [, setIsSearchFocused] = useState(false);
+  const [imageErrors, setImageErrors] = useState<boolean[]>([]);
 
   const heroImages = [
     '/img/celestehome1.jpg',
@@ -23,6 +24,14 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, [heroImages.length]);
 
+  const handleImageError = (index: number) => {
+    setImageErrors(prev => {
+      const newErrors = [...prev];
+      newErrors[index] = true;
+      return newErrors;
+    });
+  };
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     // Implement search functionality
@@ -32,21 +41,30 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Images with Fade Transition */}
-      {heroImages.map((image, index) => (
-        <div
-          key={image}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <Image
-            src={image}
-            alt={`Luxury property ${index + 1}`}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/70 via-neutral-900/50 to-transparent" />
-        </div>
-      ))}
+      {heroImages.map((image, index) => {
+        // Skip images that have errors
+        if (imageErrors[index]) return null;
+        
+        return (
+          <div
+            key={image}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <Image
+              src={image}
+              alt={`Luxury property ${index + 1}`}
+              width={1920}
+              height={1080}
+              className="w-full h-full object-cover"
+              onError={() => handleImageError(index)}
+              priority={index === 0}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/70 via-neutral-900/50 to-transparent" />
+          </div>
+        );
+      })}
 
       {/* Content */}
       <div className="relative z-10 container-responsive text-center text-white">
@@ -122,17 +140,22 @@ export default function Hero() {
 
       {/* Image Indicators */}
       <div className="absolute bottom-8 right-8 flex space-x-3">
-        {heroImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentImageIndex(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentImageIndex
-                ? 'bg-white scale-125'
-                : 'bg-white/40 hover:bg-white/60'
-            }`}
-          />
-        ))}
+        {heroImages.map((_, index) => {
+          // Skip indicators for images with errors
+          if (imageErrors[index]) return null;
+          
+          return (
+            <button
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentImageIndex
+                  ? 'bg-white scale-125'
+                  : 'bg-white/40 hover:bg-white/60'
+              }`}
+            />
+          );
+        })}
       </div>
     </section>
   );

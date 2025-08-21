@@ -133,6 +133,8 @@ export default function PropertyDetails() {
             <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-6">
               <Image
                 src={getImageUrl(property)}
+                width={1920}
+                height={1080}
                 alt={property.title}
                 className="w-full h-96 object-cover"
                 onError={(e) => {

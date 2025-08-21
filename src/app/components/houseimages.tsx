@@ -18,8 +18,8 @@ export default function HoseImages() {
               <Image
                 src={image.src}
                 alt={image.alt}
-                width={image.width}
-                height={image.height}
+                width={image.width||1920}
+                height={image.height||1080}
                 className="w-full h-auto object-cover"
               />
             </div>

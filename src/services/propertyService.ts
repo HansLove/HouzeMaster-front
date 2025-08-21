@@ -1,5 +1,5 @@
 import Papa from 'papaparse';
-import { Property, PropertyCard } from '../types/property';
+import { IPropertyCard, Property } from '../types/property';
 
 const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTcC2iDfeGYUXk8W6iZiQ7VtQlI3zXxn7V2puxu12bAx7wWXc-r12W518YHVxLsZj7vaTfgUmL0YJBp/pub?gid=0&single=true&output=csv';
 
@@ -53,7 +53,7 @@ export class PropertyService {
     }
   }
 
-  static transformToPropertyCard(property: Property): PropertyCard {
+  static transformToPropertyCard(property: Property): IPropertyCard {
     const getImageUrl = (property: Property): string => {
       // Try to get the first available image
       if (property.image1_url && property.image1_url !== '#ERROR!') {
@@ -111,7 +111,7 @@ export class PropertyService {
     };
   }
 
-  static async getPropertiesForDisplay(): Promise<PropertyCard[]> {
+  static async getPropertiesForDisplay(): Promise<IPropertyCard[]> {
     try {
       const properties = await this.fetchProperties();
       return properties

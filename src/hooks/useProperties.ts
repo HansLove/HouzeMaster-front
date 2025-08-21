@@ -1,11 +1,12 @@
 import { useState, useEffect, useMemo } from 'react';
-import { PropertyCard } from '../types/property';
+// import { PropertyCard } from '../types/property';
 import { PropertyService } from '../services/propertyService';
 import { PropertyFilters } from '../app/components/property-filters';
+import { IPropertyCard } from '@/types/property';
 
 export interface UsePropertiesReturn {
-  properties: PropertyCard[];
-  filteredProperties: PropertyCard[];
+  properties: IPropertyCard[];
+  filteredProperties: IPropertyCard[];
   loading: boolean;
   error: string | null;
   refetch: () => Promise<void>;
@@ -27,7 +28,7 @@ const defaultFilters: PropertyFilters = {
 };
 
 export function useProperties(): UsePropertiesReturn {
-  const [properties, setProperties] = useState<PropertyCard[]>([]);
+  const [properties, setProperties] = useState<IPropertyCard[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [filters, setFilters] = useState<PropertyFilters>(defaultFilters);
