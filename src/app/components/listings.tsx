@@ -6,6 +6,7 @@ import { useProperties } from "../../hooks/useProperties";
 import type { PropertyCard } from "../../types/property";
 import PropertyFilters from "./property-filters";
 import LeadCapture from "./lead-capture";
+import Image from 'next/image';
 
 export default function Listings() {
   const { filteredProperties, loading, error, refetch, filters, setFilters } = useProperties();
@@ -164,7 +165,7 @@ function PropertyCard({ property, onLeadCapture }: PropertyCardProps) {
       <div className="card hover-lift">
         {/* Image Section */}
         <div className="relative aspect-video overflow-hidden">
-          <img
+          <Image
             src={property.image}
             alt={property.title}
             className={`w-full h-full object-cover transition-all duration-700 ${

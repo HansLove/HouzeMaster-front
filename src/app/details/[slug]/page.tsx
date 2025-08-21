@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import { FaBath, FaBed, FaCar, FaMapMarkerAlt, FaTag, FaStar, FaExclamationTriangle } from 'react-icons/fa';
 import { PropertyService } from '../../../services/propertyService';
 import { Property } from '../../../types/property';
+import Image from 'next/image';
 
 export default function PropertyDetails() {
   const params = useParams();
@@ -130,7 +131,7 @@ export default function PropertyDetails() {
           <div className="lg:col-span-2">
             {/* Main Image */}
             <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-6">
-              <img
+              <Image
                 src={getImageUrl(property)}
                 alt={property.title}
                 className="w-full h-96 object-cover"

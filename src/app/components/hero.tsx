@@ -1,12 +1,13 @@
 'use client';
 
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { FaSearch, FaMapMarkerAlt, FaHome, FaHeart } from 'react-icons/fa';
 
 export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [, setIsSearchFocused] = useState(false);
 
   const heroImages = [
     '/img/celestehome1.jpg',
@@ -38,7 +39,7 @@ export default function Hero() {
             index === currentImageIndex ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <img
+          <Image
             src={image}
             alt={`Luxury property ${index + 1}`}
             className="w-full h-full object-cover"

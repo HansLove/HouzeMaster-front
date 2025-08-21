@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaUser, FaEnvelope, FaPhone, FaHome, FaHeart, FaArrowRight, FaCheck } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaPhone, FaHome, FaArrowRight, FaCheck } from 'react-icons/fa';
 
 interface LeadFormData {
   name: string;
