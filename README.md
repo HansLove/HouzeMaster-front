@@ -1,211 +1,262 @@
-# HouzeMaster - Propiedades Excepcionales en México
+# Taloon Studio - Premium Real Estate Website
 
-Un sistema inmobiliario de lujo y minimalista construido con Next.js que lee datos dinámicamente desde Google Sheets, diseñado para ofrecer una experiencia sensual y elegante.
+A modern, high-performance real estate website built with Next.js 14, TypeScript, and Tailwind CSS. This project showcases luxury properties in Mexico's most beautiful destinations with advanced caching, animations, and a responsive design.
 
-## 🌟 **Características Destacadas**
+## 🚀 Features
 
-- **Diseño Sensual y Minimalista**: Interfaz elegante con paleta de colores rosa y dorado
-- **Datos Dinámicos**: Lee propiedades desde Google Sheets en tiempo real
-- **Sistema de Leads Bilingüe**: Captura de leads en español e inglés
-- **Filtros Inteligentes**: Búsqueda avanzada con interfaz intuitiva
-- **Diseño Responsivo**: Adaptable a todos los dispositivos
-- **Páginas de Detalles**: Información completa de cada propiedad
-- **Manejo de Estados**: Carga, errores y estados vacíos manejados elegantemente
-- **TypeScript**: Código tipado y robusto
+### Performance & Caching
+- **Zustand State Management**: Efficient client-side state management with persistent caching
+- **Smart Property Caching**: Only 10 properties cached for ultra-fast loading
+- **Cache Expiry Management**: 5-minute cache validity with automatic refresh
+- **Optimized Image Loading**: Progressive image loading with fallbacks
+- **Lazy Loading**: Components load only when needed
 
-## 🎨 **Paleta de Colores Sensual**
+### Modern UI/UX
+- **Framer Motion Animations**: Smooth, professional animations throughout
+- **Responsive Design**: Mobile-first approach with breakpoint optimization
+- **Glass Morphism**: Modern backdrop blur effects and transparency
+- **Gradient Design**: Beautiful color gradients and visual hierarchy
+- **Interactive Elements**: Hover effects, micro-interactions, and smooth transitions
 
-- **Primary**: Rosa vibrante (#ec4899) para elementos principales
-- **Secondary**: Azul elegante (#64748b) para elementos secundarios
-- **Accent**: Dorado (#eab308) para destacados y badges
-- **Neutral**: Grises sofisticados para texto y fondos
+### Real Estate Features
+- **Advanced Property Search**: Multi-criteria filtering (price, location, type, etc.)
+- **Property Gallery**: High-quality image displays with thumbnails
+- **Featured Properties**: Priority highlighting for premium listings
+- **Contact Forms**: Integrated lead capture and agent communication
+- **Property Details**: Comprehensive property information pages
 
-## 🛠️ **Tecnologías**
+### Technical Excellence
+- **TypeScript**: Full type safety and better development experience
+- **Next.js 14**: Latest React framework with App Router
+- **Tailwind CSS**: Utility-first CSS framework for rapid development
+- **Lucide Icons**: Modern, consistent iconography
+- **SEO Optimized**: Meta tags, structured data, and performance metrics
 
-- **Next.js 14** - Framework de React con App Router
-- **TypeScript** - Tipado estático y robusto
-- **Tailwind CSS** - Framework de CSS con clases personalizadas
-- **React Icons** - Iconografía elegante
-- **PapaParse** - Parsing de CSV para Google Sheets
-- **Axios** - Cliente HTTP para APIs
+## 🏗️ Architecture
 
-## 📊 **Fuente de Datos**
+### State Management
+```
+src/stores/
+├── propertyStore.ts          # Zustand store for property caching
+└── cache management          # 10-property limit with expiry
+```
 
-El proyecto lee datos desde una hoja de cálculo de Google Sheets que contiene información detallada de propiedades inmobiliarias:
+### Services Layer
+```
+src/services/
+├── enhancedPropertyService.ts # Enhanced property service with caching
+└── propertyService.ts        # Legacy service (maintained for compatibility)
+```
 
-- Información básica (título, descripción, precio)
-- Características (recámaras, baños, área construida)
-- Ubicación (dirección, ciudad, estado, coordenadas)
-- Amenidades y etiquetas
-- Imágenes y videos
-- Información de contacto
+### Hooks & Data
+```
+src/hooks/
+├── useEnhancedProperties.ts  # Main hook for property management
+└── useFilteredProperties.ts  # Filtered properties hook
+```
 
-## 🚀 **Instalación**
+### Components
+```
+src/app/components/
+├── ModernNavigation.tsx      # Responsive navigation with animations
+├── ModernHero.tsx           # Hero section with search functionality
+├── ModernPropertyCard.tsx   # Property display cards
+├── ModernListings.tsx       # Property listings with cache status
+├── ModernPropertyFilters.tsx # Advanced filtering system
+├── ModernFooter.tsx         # Comprehensive footer with links
+└── [legacy components]      # Original components maintained
+```
 
-1. **Clonar el repositorio**
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+- Git
+
+### Installation
+
+1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd houzemaster
+   cd celeste
    ```
 
-2. **Instalar dependencias**
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-3. **Ejecutar en desarrollo**
+3. **Run the development server**
    ```bash
    npm run dev
    ```
 
-4. **Abrir en el navegador**
-   ```
-   http://localhost:3000
-   ```
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 📁 **Estructura del Proyecto**
+### Build for Production
 
+```bash
+npm run build
+npm start
+```
+
+## 📱 Pages & Routes
+
+- **Home** (`/`): Hero section, featured properties, company overview
+- **Listings** (`/listings`): All properties with advanced filtering
+- **Property Details** (`/details/[slug]`): Individual property information
+- **About** (`/about`): Company story, team, and values
+- **Contact** (`/contact`): Contact forms and company information
+
+## 🎨 Design System
+
+### Color Palette
+- **Primary**: Blue (#2563eb) - Trust and professionalism
+- **Secondary**: Cyan (#0891b2) - Modern and fresh
+- **Accent**: Purple (#7c3aed) - Luxury and sophistication
+- **Neutral**: Gray scale for text and backgrounds
+
+### Typography
+- **Headings**: Geist Sans - Modern and readable
+- **Body**: Geist Sans - Clean and professional
+- **Mono**: Geist Mono - For technical content
+
+### Components
+- **Cards**: Rounded corners (2xl), subtle shadows, hover effects
+- **Buttons**: Gradient backgrounds, rounded corners, smooth transitions
+- **Forms**: Clean inputs with focus states and validation
+- **Navigation**: Transparent to solid background on scroll
+
+## 🔧 Configuration
+
+### Environment Variables
+Create a `.env.local` file:
+```env
+NEXT_PUBLIC_CSV_URL=your_csv_url_here
+NEXT_PUBLIC_SITE_URL=your_site_url_here
+```
+
+### Tailwind Configuration
+The project uses a custom Tailwind configuration with:
+- Extended color palette
+- Custom animations
+- Responsive breakpoints
+- Component utilities
+
+### Cache Configuration
+- **Cache Limit**: 10 properties maximum
+- **Cache Expiry**: 5 minutes
+- **Persistence**: Local storage with Zustand persist middleware
+
+## 📊 Performance Features
+
+### Caching Strategy
+1. **Initial Load**: First 10 properties cached immediately
+2. **Smart Refresh**: Cache expires after 5 minutes
+3. **Background Updates**: Non-blocking property refresh
+4. **Fallback Support**: Expired cache used if API fails
+
+### Image Optimization
+- **Next.js Image Component**: Automatic optimization
+- **Progressive Loading**: Blur placeholders and smooth transitions
+- **Responsive Images**: Multiple sizes for different devices
+- **Lazy Loading**: Images load as they enter viewport
+
+### Bundle Optimization
+- **Code Splitting**: Automatic route-based splitting
+- **Tree Shaking**: Unused code elimination
+- **Dynamic Imports**: Components loaded on demand
+
+## 🧪 Development
+
+### Code Quality
+- **ESLint**: Code linting and formatting
+- **TypeScript**: Strict type checking
+- **Prettier**: Code formatting (if configured)
+
+### Testing
+```bash
+npm run lint        # Run ESLint
+npm run type-check  # TypeScript type checking
+```
+
+### File Structure
 ```
 src/
-├── app/                    # Páginas y componentes de Next.js
-│   ├── components/         # Componentes reutilizables
-│   │   ├── hero.tsx       # Hero principal sensual
-│   │   ├── listings.tsx   # Lista de propiedades
-│   │   ├── lead-capture.tsx # Captura de leads bilingüe
-│   │   └── property-filters.tsx # Filtros inteligentes
-│   ├── details/           # Páginas de detalles de propiedades
-│   └── page.tsx           # Página principal
-├── hooks/                 # Hooks personalizados de React
-├── services/              # Servicios para manejo de datos
-├── types/                 # Definiciones de tipos TypeScript
-└── globals.css            # Estilos globales sensuales
+├── app/                    # Next.js App Router
+│   ├── components/         # Reusable components
+│   ├── [routes]/          # Page routes
+│   ├── globals.css        # Global styles
+│   └── layout.tsx         # Root layout
+├── hooks/                  # Custom React hooks
+├── services/               # API and business logic
+├── stores/                 # Zustand state stores
+└── types/                  # TypeScript type definitions
 ```
 
-## 🔧 **Componentes Principales**
+## 🚀 Deployment
 
-### Hero
-Sección principal con carrusel de imágenes, búsqueda integrada y estadísticas destacadas.
+### Vercel (Recommended)
+1. Connect your GitHub repository
+2. Configure environment variables
+3. Deploy automatically on push
 
-### Listings
-Muestra la lista de propiedades con filtros y sistema de captura de leads integrado.
+### Other Platforms
+- **Netlify**: Static site generation
+- **AWS Amplify**: Full-stack deployment
+- **Docker**: Containerized deployment
 
-### LeadCapture
-Sistema bilingüe de captura de leads con formulario inteligente:
-- Campos personalizables según la propiedad
-- Validación en tiempo real
-- Estados de carga y éxito
-- Soporte para español e inglés
+## 📈 SEO & Analytics
 
-### PropertyFilters
-Sistema de filtros avanzados con interfaz intuitiva:
-- Búsqueda por texto inteligente
-- Filtros por tipo y operación
-- Rangos de precio y recámaras
-- Filtro por ubicación y destacadas
+### SEO Features
+- **Meta Tags**: Comprehensive meta information
+- **Open Graph**: Social media optimization
+- **Structured Data**: Property schema markup
+- **Sitemap**: Automatic sitemap generation
 
-### PropertyCard
-Tarjeta individual de propiedad con diseño sensual:
-- Imágenes con efectos hover
-- Badges de destacada y tipo
-- Botones de acción (like, compartir, interés)
-- Información estructurada elegantemente
+### Performance Metrics
+- **Core Web Vitals**: Optimized for Google metrics
+- **Lighthouse Score**: Target 90+ performance
+- **Mobile First**: Responsive design priority
 
-## 📡 **Servicios**
+## 🔒 Security
 
-### PropertyService
-Maneja la comunicación con Google Sheets y el parsing de datos CSV:
+### Best Practices
+- **Input Validation**: Form data sanitization
+- **XSS Protection**: Content Security Policy
+- **HTTPS Only**: Secure connections required
+- **Rate Limiting**: API request throttling
 
-- `fetchProperties()`: Obtiene datos del CSV
-- `transformToPropertyCard()`: Convierte datos raw a formato de tarjeta
-- `getPropertiesForDisplay()`: Obtiene propiedades listas para mostrar
+## 🤝 Contributing
 
-## 🎯 **Hooks Personalizados**
+### Development Workflow
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
-### useProperties
-Hook principal que maneja el estado de las propiedades:
-- Estado de carga con animaciones
-- Manejo de errores elegante
-- Filtrado de propiedades en tiempo real
-- Estado de filtros persistente
+### Code Standards
+- **TypeScript**: Strict mode enabled
+- **ESLint**: Follow linting rules
+- **Components**: Functional components with hooks
+- **Styling**: Tailwind CSS utilities
 
-## 🎨 **Personalización**
+## 📄 License
 
-### Modificar la Fuente de Datos
-Para cambiar la fuente de datos, edita la constante `CSV_URL` en `src/services/propertyService.ts`:
+This project is proprietary software developed for Taloon Studio. All rights reserved.
 
-```typescript
-const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/YOUR_SHEET_ID/pub?gid=0&single=true&output=csv';
-```
+## 🆘 Support
 
-### Cambiar Colores
-La paleta de colores se define en `tailwind.config.ts`:
-
-```typescript
-primary: {
-  500: '#ec4899', // Rosa principal
-  600: '#db2777', // Rosa oscuro
-}
-```
-
-### Agregar Nuevos Filtros
-1. Extiende la interfaz `PropertyFilters`
-2. Actualiza el componente `PropertyFilters`
-3. Implementa la lógica de filtrado en `useProperties`
-
-## 🚀 **Despliegue**
-
-### Vercel (Recomendado)
-1. Conecta tu repositorio a Vercel
-2. Configura las variables de entorno si es necesario
-3. Despliega automáticamente
-
-### Otros Proveedores
-El proyecto es compatible con cualquier proveedor que soporte Next.js:
-- Netlify
-- AWS Amplify
-- Heroku
-
-## 🔍 **Solución de Problemas**
-
-### Error de CORS
-Si encuentras errores de CORS al leer Google Sheets, considera:
-- Usar un proxy
-- Configurar CORS en Google Sheets
-- Usar la API oficial de Google Sheets
-
-### Datos No Cargando
-Verifica:
-- URL del CSV es accesible
-- Formato del CSV es correcto
-- Estructura de columnas coincide con los tipos
-
-## 🌟 **Características Únicas de HouzeMaster**
-
-- **Diseño Sensual**: Paleta de colores rosa y dorado para una experiencia premium
-- **Minimalismo Elegante**: Interfaz limpia y sofisticada
-- **Bilingüe Nativo**: Soporte completo para español e inglés
-- **Captura de Leads Inteligente**: Formularios contextuales según la propiedad
-- **Animaciones Suaves**: Transiciones elegantes y efectos hover
-- **Responsive Premium**: Diseño adaptativo de alta calidad
-
-## 🤝 **Contribución**
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## 📄 **Licencia**
-
-Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
-
-## 📞 **Soporte**
-
-Para soporte o preguntas:
-- Abre un issue en GitHub
-- Contacta al equipo de desarrollo
+For technical support or questions:
+- **Email**: dev@taloonstudio.com
+- **Documentation**: [Internal Wiki]
+- **Issues**: GitHub Issues (if public)
 
 ---
 
-**Desarrollado con ❤️ y elegancia para el sector inmobiliario de lujo**
+**Built with ❤️ by Taloon Studio Development Team**
+
+*Last updated: December 2024*
