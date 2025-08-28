@@ -85,12 +85,13 @@ export function ModernNavigation() {
               </div>
               <div className="hidden md:block">
                 <h1 className={`text-xl font-bold transition-colors duration-300 ${
-                  isScrolled ? 'text-gray-900' : 'text-white'
+                  // isScrolled ? 'text-gray-900' : 'text-white'
+                  isScrolled ? 'text-gray-900' : 'text-gray-400'
                 }`}>
                   Taloon Studio
                 </h1>
                 <p className={`text-sm transition-colors duration-300 ${
-                  isScrolled ? 'text-gray-600' : 'text-gray-200'
+                  isScrolled ? 'text-gray-600' : 'text-gray-300'
                 }`}>
                   Premium Real Estate
                 </p>
