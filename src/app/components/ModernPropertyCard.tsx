@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { Heart, MapPin, Bed, Bath, Square, Star, Eye } from 'lucide-react';
 import { IPropertyCard } from '@/types/property';
 import { useState } from 'react';
@@ -16,7 +16,7 @@ export function ModernPropertyCard({ property, index = 0, className = '' }: Mode
   const [isLiked, setIsLiked] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  const cardVariants = {
+  const cardVariants:Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
       opacity: 1, 
@@ -33,7 +33,7 @@ export function ModernPropertyCard({ property, index = 0, className = '' }: Mode
     }
   };
 
-  const imageVariants = {
+  const imageVariants:Variants = {
     hidden: { scale: 1.1, opacity: 0 },
     visible: { 
       scale: 1, 

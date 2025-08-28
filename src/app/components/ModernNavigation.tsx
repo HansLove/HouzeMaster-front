@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Menu, X, Home, Building2, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -19,7 +19,7 @@ export function ModernNavigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navVariants = {
+  const navVariants:Variants = {
     hidden: { y: -100, opacity: 0 },
     visible: { 
       y: 0, 
@@ -28,7 +28,7 @@ export function ModernNavigation() {
     }
   };
 
-  const menuVariants = {
+  const menuVariants:Variants = {
     hidden: { opacity: 0, x: '100%' },
     visible: { 
       opacity: 1, 
@@ -42,7 +42,7 @@ export function ModernNavigation() {
     }
   };
 
-  const menuItemVariants = {
+  const menuItemVariants:Variants = {
     hidden: { opacity: 0, x: 20 },
     visible: (i: number) => ({
       opacity: 1,
