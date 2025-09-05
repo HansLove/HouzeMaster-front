@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Taloon Studio - Premium Real Estate | Cancún, México",
+  title: "Taloon Studio - Premium Real Estate | México",
   description: "Discover luxury real estate in the most beautiful locations. Taloon Studio offers premium properties in Cancún, Tulum, and the Riviera Maya. Experience exceptional service and find your dream home.",
   keywords: "real estate, luxury properties, Cancún, Tulum, Riviera Maya, México, premium homes, beachfront properties, investment properties",
   authors: [{ name: "Taloon Studio" }],
@@ -14,11 +14,12 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://taloonstudio.com'),
+  metadataBase: new URL('https://taloon.org'),
   openGraph: {
     title: "Taloon Studio - Premium Real Estate",
     description: "Discover luxury real estate in the most beautiful locations. Premium properties in Cancún, Tulum, and the Riviera Maya.",
-    url: 'https://taloonstudio.com',
+    // url: 'https://taloonstudio.com',
+    url: 'https://taloon.org',
     siteName: 'Taloon Studio',
     images: [
       {
