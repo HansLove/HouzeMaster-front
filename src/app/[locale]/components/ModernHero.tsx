@@ -2,9 +2,11 @@
 
 import { motion, Variants } from 'framer-motion';
 import { MessageCircle, DollarSign, Shield, Zap, ArrowRight } from 'lucide-react';
-// import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 export function ModernHero() {
+  const t = useTranslations('hero');
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -83,9 +85,9 @@ export function ModernHero() {
             variants={itemVariants}
             className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           >
-            Land Investment
+            {t('landInvestment')}
             <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
-              Starting at 450K MXN
+              {t('startingAt')}
             </span>
           </motion.h1>
 
@@ -94,8 +96,7 @@ export function ModernHero() {
             variants={itemVariants}
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Explore land investment opportunities with flexible payment options. 
-            We help you explore possibilities with traditional payments, Bitcoin, and USDT.
+            {t('subtitle')}
           </motion.p>
 
           {/* Price Highlight */}
@@ -105,13 +106,13 @@ export function ModernHero() {
           >
             <div className="flex items-center justify-center gap-4 mb-6">
               <DollarSign className="w-8 h-8 text-green-400" />
-              <h2 className="text-3xl font-bold text-white">Price Transparency</h2>
+              <h2 className="text-3xl font-bold text-white">{t('priceTransparency')}</h2>
             </div>
             <p className="text-xl text-gray-300 mb-6">
-              Lots available starting from <span className="text-green-400 font-bold text-2xl">450K MXN</span>
+              {t('lotsAvailable')} <span className="text-green-400 font-bold text-2xl">450K MXN</span>
             </p>
             <p className="text-gray-400">
-              Clear pricing with no hidden fees. Explore available lots and payment options.
+              {t('clearPricing')}
             </p>
           </motion.div>
 
@@ -127,7 +128,7 @@ export function ModernHero() {
               className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white py-4 px-8 rounded-2xl font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-3"
             >
               <MessageCircle className="w-6 h-6" />
-              Contact via WhatsApp
+              {t('contactViaWhatsApp')}
               <ArrowRight className="w-5 h-5" />
             </motion.button>
             
@@ -136,7 +137,7 @@ export function ModernHero() {
               whileTap={{ scale: 0.95 }}
               className="bg-white/20 hover:bg-white/30 text-white py-4 px-8 rounded-2xl font-semibold text-lg transition-all duration-200 backdrop-blur-sm border border-white/30"
             >
-              Explore Payment Options
+              {t('explorePaymentOptions')}
             </motion.button>
           </motion.div>
 
@@ -154,8 +155,8 @@ export function ModernHero() {
               >
                 <Shield className="w-8 h-8 text-white" />
               </motion.div>
-              <h3 className="text-xl font-bold text-white mb-2">Trust & Security</h3>
-              <p className="text-gray-300">Professional, legal, and secure transactions</p>
+              <h3 className="text-xl font-bold text-white mb-2">{t('trustSecurity')}</h3>
+              <p className="text-gray-300">{t('trustSecurityDesc')}</p>
             </div>
 
             <div className="text-center">
@@ -167,8 +168,8 @@ export function ModernHero() {
               >
                 <DollarSign className="w-8 h-8 text-white" />
               </motion.div>
-              <h3 className="text-xl font-bold text-white mb-2">Payment Flexibility</h3>
-              <p className="text-gray-300">MXN, Bitcoin, and USDT options available</p>
+              <h3 className="text-xl font-bold text-white mb-2">{t('paymentFlexibility')}</h3>
+              <p className="text-gray-300">{t('paymentFlexibilityDesc')}</p>
             </div>
 
             <div className="text-center">
@@ -180,13 +181,12 @@ export function ModernHero() {
               >
                 <Zap className="w-8 h-8 text-white" />
               </motion.div>
-              <h3 className="text-xl font-bold text-white mb-2">Innovation</h3>
-              <p className="text-gray-300">Explore property tokenization possibilities</p>
+              <h3 className="text-xl font-bold text-white mb-2">{t('innovation')}</h3>
+              <p className="text-gray-300">{t('innovationDesc')}</p>
             </div>
           </motion.div>
         </motion.div>
       </div>
-
     </section>
   );
 }

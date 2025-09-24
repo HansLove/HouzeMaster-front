@@ -2,9 +2,12 @@
 
 import { motion, Variants } from 'framer-motion';
 import { Shield, DollarSign, Zap, CheckCircle, Users, Award, MessageCircle } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 export function WhyHouzeMaster() {
+  const t = useTranslations('whyHouzeMaster');
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -31,24 +34,24 @@ export function WhyHouzeMaster() {
   const features = [
     {
       icon: Shield,
-      title: "Trust & Security",
-      description: "Professional, legal, and secure transactions with full transparency",
+      title: t('trustSecurity'),
+      description: t('trustSecurityDesc'),
       color: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-50",
       iconColor: "text-blue-600"
     },
     {
       icon: DollarSign,
-      title: "Payment Flexibility",
-      description: "Explore options with traditional payments, Bitcoin, and USDT",
+      title: t('paymentFlexibility'),
+      description: t('paymentFlexibilityDesc'),
       color: "from-green-500 to-emerald-500",
       bgColor: "bg-green-50",
       iconColor: "text-green-600"
     },
     {
       icon: Zap,
-      title: "Innovation",
-      description: "Guidance on property tokenization to explore new ways to build value",
+      title: t('innovation'),
+      description: t('innovationDesc'),
       color: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-50",
       iconColor: "text-purple-600"
@@ -56,12 +59,12 @@ export function WhyHouzeMaster() {
   ];
 
   const benefits = [
-    "Clear pricing starting from 450K MXN",
-    "No hidden fees or surprises",
-    "Professional guidance throughout the process",
-    "Flexible payment options available",
-    "Legal and secure transactions",
-    "Potential for property tokenization"
+    t('benefits.clearPricing'),
+    t('benefits.noHiddenFees'),
+    t('benefits.professionalGuidance'),
+    t('benefits.flexiblePayments'),
+    t('benefits.legalSecure'),
+    t('benefits.tokenizationPotential')
   ];
 
   const handleWhatsAppClick = () => {
@@ -81,11 +84,10 @@ export function WhyHouzeMaster() {
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose <span className="text-gradient-primary">Houze Master</span>?
+              {t('title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We provide clarity, flexibility, and innovation in land investment. 
-              Explore possibilities without over-promising, with options available for every investor.
+              {t('subtitle')}
             </p>
           </motion.div>
 
@@ -121,7 +123,7 @@ export function WhyHouzeMaster() {
               {/* Benefits List */}
               <div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-8">
-                  What You Can Expect
+                  {t('whatYouCanExpect')}
                 </h3>
                 <div className="space-y-4">
                   {benefits.map((benefit, index) => (
@@ -145,7 +147,7 @@ export function WhyHouzeMaster() {
                 <div className="relative w-full h-80 rounded-2xl overflow-hidden mb-8">
                   <Image
                     src="/img/houses/banner1.jpg"
-                    alt="Land Development"
+                    alt={t('landDevelopment')}
                     fill
                     className="object-cover"
                   />
@@ -159,7 +161,7 @@ export function WhyHouzeMaster() {
                   className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white py-4 px-8 rounded-2xl font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
                 >
                   <MessageCircle className="w-6 h-6" />
-                  Contact Us to Explore Options
+                  {t('contactUsToExplore')}
                 </motion.button>
               </div>
             </div>
@@ -181,7 +183,7 @@ export function WhyHouzeMaster() {
                 <Users className="w-8 h-8 text-white" />
               </motion.div>
               <h3 className="text-3xl font-bold text-gray-900 mb-2">100+</h3>
-              <p className="text-gray-600">Satisfied Investors</p>
+              <p className="text-gray-600">{t('satisfiedInvestors')}</p>
             </div>
 
             <div className="text-center">
@@ -195,7 +197,7 @@ export function WhyHouzeMaster() {
                 <Award className="w-8 h-8 text-white" />
               </motion.div>
               <h3 className="text-3xl font-bold text-gray-900 mb-2">5+</h3>
-              <p className="text-gray-600">Years Experience</p>
+              <p className="text-gray-600">{t('yearsExperience')}</p>
             </div>
 
             <div className="text-center">
@@ -209,7 +211,7 @@ export function WhyHouzeMaster() {
                 <DollarSign className="w-8 h-8 text-white" />
               </motion.div>
               <h3 className="text-3xl font-bold text-gray-900 mb-2">450K+</h3>
-              <p className="text-gray-600">Starting Investment</p>
+              <p className="text-gray-600">{t('startingInvestment')}</p>
             </div>
           </motion.div>
         </motion.div>

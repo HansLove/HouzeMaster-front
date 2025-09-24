@@ -3,13 +3,16 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Menu, X, Home, Building2, CreditCard, Zap, MessageCircle } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function ModernNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const t = useTranslations('navigation');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,10 +70,10 @@ export function ModernNavigation() {
   };
 
   const navItems = [
-    { name: 'Home', href: '/', icon: Home, shortName: 'Home' },
-    { name: 'Why Us', href: '#why-houze-master', icon: Building2, shortName: 'Why' },
-    { name: 'Payments', href: '#payment-options', icon: CreditCard, shortName: 'Pay' },
-    { name: 'Tokenization', href: '#tokenization', icon: Zap, shortName: 'Token' },
+    { name: t('home'), href: '/', icon: Home, shortName: t('home') },
+    { name: t('whyUs'), href: '#why-houze-master', icon: Building2, shortName: t('whyUs') },
+    { name: t('payments'), href: '#payment-options', icon: CreditCard, shortName: t('payments') },
+    { name: t('tokenization'), href: '#tokenization', icon: Zap, shortName: t('tokenization') },
   ];
 
   const handleNavClick = (href: string) => {
@@ -121,7 +124,7 @@ export function ModernNavigation() {
                   <p className={`text-xs lg:text-sm transition-colors duration-300 ${
                     isScrolled ? 'text-gray-600' : 'text-gray-300'
                   }`}>
-                    Land Investment & Tokenization
+                    {t('landInvestment')}
                   </p>
                 </div>
               </Link>
@@ -166,6 +169,9 @@ export function ModernNavigation() {
 
             {/* CTA Section */}
             <div className="flex items-center gap-3">
+              {/* Language Switcher */}
+              <LanguageSwitcher />
+
               {/* WhatsApp CTA - More sophisticated */}
               <motion.button
                 whileHover={{ scale: 1.05, y: -1 }}
@@ -178,7 +184,7 @@ export function ModernNavigation() {
                 }`}
               >
                 <MessageCircle className="w-4 h-4" />
-                <span className="hidden md:inline">Connect</span>
+                <span className="hidden md:inline">{t('connect')}</span>
               </motion.button>
 
               {/* Mobile Menu Button */}
@@ -240,7 +246,7 @@ export function ModernNavigation() {
                     </div>
                     <div>
                       <h2 className="text-lg font-bold text-gray-900">Houze Master</h2>
-                      <p className="text-sm text-gray-600">Land Investment & Tokenization</p>
+                      <p className="text-sm text-gray-600">{t('landInvestment')}</p>
                     </div>
                   </div>
                   <motion.button
@@ -291,9 +297,9 @@ export function ModernNavigation() {
                 {/* Contact Section */}
                 <div className="mt-8 pt-6 border-t border-gray-200/50">
                   <div className="bg-gradient-to-br from-gray-50 to-blue-50/50 rounded-2xl p-4 mb-4">
-                    <h3 className="text-sm font-semibold text-gray-900 mb-3">Ready to explore?</h3>
+                    <h3 className="text-sm font-semibold text-gray-900 mb-3">{t('readyToExplore')}</h3>
                     <p className="text-xs text-gray-600 mb-4">
-                      Connect with us to discuss land investment opportunities and payment options.
+                      {t('connectDescription')}
                     </p>
                     <motion.button
                       whileHover={{ scale: 1.02 }}
@@ -305,13 +311,13 @@ export function ModernNavigation() {
                       className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 px-4 rounded-xl font-medium text-sm transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
                     >
                       <MessageCircle className="w-4 h-4" />
-                      Connect via WhatsApp
+                      {t('connectViaWhatsApp')}
                     </motion.button>
                   </div>
                   
                   <div className="text-center">
                     <p className="text-xs text-gray-500">+52 722 349 3064</p>
-                    <p className="text-xs text-gray-400 mt-1">Professional guidance available</p>
+                    <p className="text-xs text-gray-400 mt-1">{t('professionalGuidance')}</p>
                   </div>
                 </div>
               </div>

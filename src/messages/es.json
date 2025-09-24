@@ -1,0 +1,113 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "whyUs": "Por Qué Nosotros",
+    "payments": "Pagos",
+    "tokenization": "Tokenización",
+    "about": "Acerca de",
+    "propertyDetails": "Detalles de Propiedades",
+    "contact": "Contacto",
+    "connect": "Conectar",
+    "yourProfile": "Tu Perfil",
+    "settings": "Configuración",
+    "signOut": "Cerrar Sesión",
+    "openMainMenu": "Abrir menú principal",
+    "readyToExplore": "¿Listo para explorar?",
+    "connectDescription": "Conéctate con nosotros para discutir oportunidades de inversión en terrenos y opciones de pago.",
+    "connectViaWhatsApp": "Conectar vía WhatsApp",
+    "professionalGuidance": "Orientación profesional disponible",
+    "landInvestment": "Inversión en Terrenos y Tokenización"
+  },
+  "hero": {
+    "landInvestment": "Inversión en Terrenos",
+    "startingAt": "Desde 450K MXN",
+    "subtitle": "Explora oportunidades de inversión en terrenos con opciones de pago flexibles. Te ayudamos a explorar posibilidades con pagos tradicionales, Bitcoin y USDT.",
+    "priceTransparency": "Transparencia de Precios",
+    "lotsAvailable": "Lotes disponibles desde",
+    "clearPricing": "Precios claros sin comisiones ocultas. Explora lotes disponibles y opciones de pago.",
+    "contactViaWhatsApp": "Contactar vía WhatsApp",
+    "explorePaymentOptions": "Explorar Opciones de Pago",
+    "trustSecurity": "Confianza y Seguridad",
+    "trustSecurityDesc": "Transacciones profesionales, legales y seguras",
+    "paymentFlexibility": "Flexibilidad de Pagos",
+    "paymentFlexibilityDesc": "Opciones con pagos tradicionales, Bitcoin y USDT disponibles",
+    "innovation": "Innovación",
+    "innovationDesc": "Explora posibilidades de tokenización de propiedades"
+  },
+  "whyHouzeMaster": {
+    "title": "¿Por Qué Elegir Houze Master?",
+    "subtitle": "Proporcionamos claridad, flexibilidad e innovación en inversión de terrenos. Explora posibilidades sin promesas exageradas, con opciones disponibles para cada inversionista.",
+    "trustSecurity": "Confianza y Seguridad",
+    "trustSecurityDesc": "Transacciones profesionales, legales y seguras con total transparencia",
+    "paymentFlexibility": "Flexibilidad de Pagos",
+    "paymentFlexibilityDesc": "Explora opciones con pagos tradicionales, Bitcoin y USDT",
+    "innovation": "Innovación",
+    "innovationDesc": "Orientación sobre tokenización de propiedades para explorar nuevas formas de construir valor",
+    "whatYouCanExpect": "Lo Que Puedes Esperar",
+    "benefits": {
+      "clearPricing": "Precios claros desde 450K MXN",
+      "noHiddenFees": "Sin comisiones ocultas o sorpresas",
+      "professionalGuidance": "Orientación profesional durante todo el proceso",
+      "flexiblePayments": "Opciones de pago flexibles disponibles",
+      "legalSecure": "Transacciones legales y seguras",
+      "tokenizationPotential": "Potencial para tokenización de propiedades"
+    },
+    "contactUsToExplore": "Contáctanos para Explorar Opciones",
+    "landDevelopment": "Desarrollo de Terrenos",
+    "satisfiedInvestors": "Inversionistas Satisfechos",
+    "yearsExperience": "Años de Experiencia",
+    "startingInvestment": "Inversión Inicial"
+  },
+  "paymentOptions": {
+    "title": "Opciones de Pago Flexibles",
+    "subtitle": "Explora diferentes formas de invertir en terrenos con opciones que se adaptan a tus necesidades",
+    "traditionalPayment": "Pago Tradicional",
+    "traditionalPaymentDesc": "Pagos en MXN con financiamiento tradicional disponible",
+    "bitcoinPayment": "Pago en Bitcoin",
+    "bitcoinPaymentDesc": "Aceptamos Bitcoin para transacciones rápidas y seguras",
+    "usdtPayment": "Pago en USDT",
+    "usdtPaymentDesc": "USDT como opción estable para pagos en criptomonedas",
+    "learnMore": "Aprender Más",
+    "contactForDetails": "Contactar para Detalles"
+  },
+  "tokenization": {
+    "title": "Tokenización de Propiedades",
+    "subtitle": "Explora el futuro de la inversión inmobiliaria con tecnología blockchain",
+    "whatIsTokenization": "¿Qué es la Tokenización?",
+    "tokenizationDesc": "La tokenización permite dividir una propiedad en tokens digitales, facilitando la inversión fraccionada y aumentando la liquidez del mercado inmobiliario.",
+    "benefits": {
+      "fractionalOwnership": "Propiedad Fraccionada",
+      "fractionalOwnershipDesc": "Posee una parte de una propiedad sin necesidad de comprarla completa",
+      "increasedLiquidity": "Mayor Liquidez",
+      "increasedLiquidityDesc": "Compra y vende tokens fácilmente en mercados secundarios",
+      "lowerBarriers": "Barreras Más Bajas",
+      "lowerBarriersDesc": "Invierte en propiedades premium con capital mínimo",
+      "transparency": "Transparencia Total",
+      "transparencyDesc": "Todas las transacciones se registran en blockchain"
+    },
+    "exploreTokenization": "Explorar Tokenización",
+    "getInTouch": "Ponte en Contacto"
+  },
+  "footer": {
+    "companyDescription": "Houze Master es tu socio confiable en inversión de terrenos y tokenización de propiedades en México.",
+    "quickLinks": "Enlaces Rápidos",
+    "services": "Servicios",
+    "contactInfo": "Información de Contacto",
+    "phone": "Teléfono",
+    "email": "Email",
+    "address": "Dirección",
+    "followUs": "Síguenos",
+    "allRightsReserved": "Todos los derechos reservados",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio"
+  },
+  "common": {
+    "learnMore": "Aprender Más",
+    "contactUs": "Contáctanos",
+    "getStarted": "Comenzar",
+    "explore": "Explorar",
+    "readMore": "Leer Más",
+    "viewDetails": "Ver Detalles",
+    "backToTop": "Volver Arriba"
+  }
+}

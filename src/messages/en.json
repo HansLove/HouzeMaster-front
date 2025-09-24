@@ -1,0 +1,113 @@
+{
+  "navigation": {
+    "home": "Home",
+    "whyUs": "Why Us",
+    "payments": "Payments",
+    "tokenization": "Tokenization",
+    "about": "About",
+    "propertyDetails": "Property Details",
+    "contact": "Contact",
+    "connect": "Connect",
+    "yourProfile": "Your Profile",
+    "settings": "Settings",
+    "signOut": "Sign out",
+    "openMainMenu": "Open main menu",
+    "readyToExplore": "Ready to explore?",
+    "connectDescription": "Connect with us to discuss land investment opportunities and payment options.",
+    "connectViaWhatsApp": "Connect via WhatsApp",
+    "professionalGuidance": "Professional guidance available",
+    "landInvestment": "Land Investment & Tokenization"
+  },
+  "hero": {
+    "landInvestment": "Land Investment",
+    "startingAt": "Starting at 450K MXN",
+    "subtitle": "Explore land investment opportunities with flexible payment options. We help you explore possibilities with traditional payments, Bitcoin, and USDT.",
+    "priceTransparency": "Price Transparency",
+    "lotsAvailable": "Lots available starting from",
+    "clearPricing": "Clear pricing with no hidden fees. Explore available lots and payment options.",
+    "contactViaWhatsApp": "Contact via WhatsApp",
+    "explorePaymentOptions": "Explore Payment Options",
+    "trustSecurity": "Trust & Security",
+    "trustSecurityDesc": "Professional, legal, and secure transactions",
+    "paymentFlexibility": "Payment Flexibility",
+    "paymentFlexibilityDesc": "MXN, Bitcoin, and USDT options available",
+    "innovation": "Innovation",
+    "innovationDesc": "Explore property tokenization possibilities"
+  },
+  "whyHouzeMaster": {
+    "title": "Why Choose Houze Master?",
+    "subtitle": "We provide clarity, flexibility, and innovation in land investment. Explore possibilities without over-promising, with options available for every investor.",
+    "trustSecurity": "Trust & Security",
+    "trustSecurityDesc": "Professional, legal, and secure transactions with full transparency",
+    "paymentFlexibility": "Payment Flexibility",
+    "paymentFlexibilityDesc": "Explore options with traditional payments, Bitcoin, and USDT",
+    "innovation": "Innovation",
+    "innovationDesc": "Guidance on property tokenization to explore new ways to build value",
+    "whatYouCanExpect": "What You Can Expect",
+    "benefits": {
+      "clearPricing": "Clear pricing starting from 450K MXN",
+      "noHiddenFees": "No hidden fees or surprises",
+      "professionalGuidance": "Professional guidance throughout the process",
+      "flexiblePayments": "Flexible payment options available",
+      "legalSecure": "Legal and secure transactions",
+      "tokenizationPotential": "Potential for property tokenization"
+    },
+    "contactUsToExplore": "Contact Us to Explore Options",
+    "landDevelopment": "Land Development",
+    "satisfiedInvestors": "Satisfied Investors",
+    "yearsExperience": "Years Experience",
+    "startingInvestment": "Starting Investment"
+  },
+  "paymentOptions": {
+    "title": "Flexible Payment Options",
+    "subtitle": "Explore different ways to invest in land with options that fit your needs",
+    "traditionalPayment": "Traditional Payment",
+    "traditionalPaymentDesc": "MXN payments with traditional financing available",
+    "bitcoinPayment": "Bitcoin Payment",
+    "bitcoinPaymentDesc": "We accept Bitcoin for fast and secure transactions",
+    "usdtPayment": "USDT Payment",
+    "usdtPaymentDesc": "USDT as a stable option for cryptocurrency payments",
+    "learnMore": "Learn More",
+    "contactForDetails": "Contact for Details"
+  },
+  "tokenization": {
+    "title": "Property Tokenization",
+    "subtitle": "Explore the future of real estate investment with blockchain technology",
+    "whatIsTokenization": "What is Tokenization?",
+    "tokenizationDesc": "Tokenization allows dividing a property into digital tokens, facilitating fractional investment and increasing real estate market liquidity.",
+    "benefits": {
+      "fractionalOwnership": "Fractional Ownership",
+      "fractionalOwnershipDesc": "Own a portion of a property without needing to buy it completely",
+      "increasedLiquidity": "Increased Liquidity",
+      "increasedLiquidityDesc": "Buy and sell tokens easily in secondary markets",
+      "lowerBarriers": "Lower Barriers",
+      "lowerBarriersDesc": "Invest in premium properties with minimal capital",
+      "transparency": "Total Transparency",
+      "transparencyDesc": "All transactions are recorded on blockchain"
+    },
+    "exploreTokenization": "Explore Tokenization",
+    "getInTouch": "Get in Touch"
+  },
+  "footer": {
+    "companyDescription": "Houze Master is your trusted partner in land investment and property tokenization in Mexico.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contactInfo": "Contact Information",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "followUs": "Follow Us",
+    "allRightsReserved": "All rights reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "getStarted": "Get Started",
+    "explore": "Explore",
+    "readMore": "Read More",
+    "viewDetails": "View Details",
+    "backToTop": "Back to Top"
+  }
+}

@@ -1,22 +1,7 @@
-import { ModernHero } from './components/ModernHero';
-import { ModernNavigation } from './components/ModernNavigation';
-import { ModernFooter } from './components/ModernFooter';
-import { WhyHouzeMaster } from './components/WhyHouzeMaster';
-import { PaymentOptions } from './components/PaymentOptions';
-import { TokenizationSection } from './components/TokenizationSection';
-// import { PaymentOptions } from './components/PaymentOptions';
-// import { TokenizationSection } from './components/TokenizationSection';
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  return (
-    <main className="min-h-screen">
-      <ModernNavigation />
-      {/* <br /> */}
-      <ModernHero />
-      <WhyHouzeMaster />
-      <PaymentOptions />
-      <TokenizationSection />
-      <ModernFooter />
-    </main>
-  );
+// This page only renders when the user visits `/`
+// which is redirected to `/es` by the middleware
+export default function RootPage() {
+  redirect('/es');
 }
