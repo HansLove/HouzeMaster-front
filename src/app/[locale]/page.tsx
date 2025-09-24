@@ -6,11 +6,7 @@ import { WhyHouzeMaster } from './components/WhyHouzeMaster';
 import { PaymentOptions } from './components/PaymentOptions';
 import { TokenizationSection } from './components/TokenizationSection';
 
-export default function Home({
-  params: { locale }
-}: {
-  params: { locale: string }
-}) {
+export default function Home() {
   return (
     <main className="min-h-screen">
       <Suspense fallback={

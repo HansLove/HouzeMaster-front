@@ -92,7 +92,7 @@ export default async function LocaleLayout({
   params: { locale: string };
 }) {
   // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale as any)) notFound();
+  if (!locales.includes(locale as typeof locales[number])) notFound();
 
   // Get messages for the specific locale
   const messages = await getMessages({ locale });

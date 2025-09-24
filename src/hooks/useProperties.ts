@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 // import { PropertyCard } from '../types/property';
 import { PropertyService } from '../services/propertyService';
-import { PropertyFilters } from '../app/components/property-filters';
+import { PropertyFilters } from '../types/propertyFilters';
 import { IPropertyCard } from '@/types/property';
 
 export interface UsePropertiesReturn {
