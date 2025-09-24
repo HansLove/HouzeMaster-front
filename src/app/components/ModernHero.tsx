@@ -2,7 +2,7 @@
 
 import { motion, Variants } from 'framer-motion';
 import { MessageCircle, DollarSign, Shield, Zap, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export function ModernHero() {
   const containerVariants = {
@@ -44,7 +44,7 @@ export function ModernHero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+    <section className="relative min-h-screen pt-24 flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Animated Background Shapes */}

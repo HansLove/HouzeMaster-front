@@ -4,11 +4,14 @@ import { ModernFooter } from './components/ModernFooter';
 import { WhyHouzeMaster } from './components/WhyHouzeMaster';
 import { PaymentOptions } from './components/PaymentOptions';
 import { TokenizationSection } from './components/TokenizationSection';
+// import { PaymentOptions } from './components/PaymentOptions';
+// import { TokenizationSection } from './components/TokenizationSection';
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <ModernNavigation />
+      {/* <br /> */}
       <ModernHero />
       <WhyHouzeMaster />
       <PaymentOptions />
