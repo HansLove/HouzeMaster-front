@@ -33,8 +33,30 @@ export function LanguageSwitcher() {
 
     startTransition(() => {
       try {
-        // Create the new path by replacing the locale in the current pathname
-        const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
+        // Handle localePrefix: 'as-needed' configuration
+        // Default locale (es) doesn't have prefix, others do
+        let newPath: string;
+        
+        if (locale === 'es') {
+          // Currently on default locale (no prefix), add prefix for new locale if not default
+          if (newLocale === 'es') {
+            newPath = pathname; // Stay on same path
+          } else {
+            // Add the new locale prefix
+            newPath = `/${newLocale}${pathname}`;
+          }
+        } else {
+          // Currently on non-default locale (has prefix), replace it
+          if (newLocale === 'es') {
+            // Switching to default locale, remove prefix
+            newPath = pathname.replace(`/${locale}`, '') || '/';
+          } else {
+            // Switching to another non-default locale, replace prefix
+            newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
+          }
+        }
+        
+        console.log('Language change:', { from: locale, to: newLocale, pathname, newPath });
         
         // Use router.push for navigation with shallow routing for faster transitions
         router.push(newPath, { scroll: false });
@@ -42,7 +64,8 @@ export function LanguageSwitcher() {
       } catch (error) {
         console.error('Error changing language:', error);
         // Fallback: reload the page with the new locale
-        window.location.href = pathname.replace(`/${locale}`, `/${newLocale}`);
+        const fallbackPath = newLocale === 'es' ? pathname.replace(`/${locale}`, '') || '/' : pathname.replace(`/${locale}`, `/${newLocale}`);
+        window.location.href = fallbackPath;
       }
     });
   };
