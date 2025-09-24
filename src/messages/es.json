@@ -109,5 +109,10 @@
     "readMore": "Leer Más",
     "viewDetails": "Ver Detalles",
     "backToTop": "Volver Arriba"
+  },
+  "language": {
+    "english": "English",
+    "spanish": "Español",
+    "selectLanguage": "Seleccionar Idioma"
   }
 }

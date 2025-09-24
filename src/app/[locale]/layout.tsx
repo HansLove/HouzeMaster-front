@@ -101,7 +101,12 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className="scroll-smooth">
       <body className="antialiased">
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider 
+          messages={messages}
+          locale={locale}
+          now={new Date()}
+          timeZone="America/Mexico_City"
+        >
           {children}
         </NextIntlClientProvider>
       </body>
