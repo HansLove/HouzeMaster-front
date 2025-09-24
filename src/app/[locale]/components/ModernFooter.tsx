@@ -31,6 +31,7 @@ export function ModernFooter() {
                   src="/logo.png"
                   alt="Houze Master"
                   fill
+                  sizes="48px"
                   className="object-contain"
                 />
               </div>

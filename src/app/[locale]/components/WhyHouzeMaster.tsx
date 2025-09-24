@@ -149,6 +149,7 @@ export function WhyHouzeMaster() {
                     src="/img/houses/banner1.jpg"
                     alt={t('landDevelopment')}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />

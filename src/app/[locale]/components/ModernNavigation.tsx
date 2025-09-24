@@ -108,12 +108,13 @@ export function ModernNavigation() {
             >
               <Link href="/" className="flex items-center gap-3 group">
                 <div className="relative w-8 h-8 lg:w-10 lg:h-10">
-                  <Image
-                    src="/logo.png"
-                    alt="Houze Master"
-                    fill
-                    className="object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
+                    <Image
+                      src="/logo.png"
+                      alt="Houze Master"
+                      fill
+                      sizes="(max-width: 768px) 32px, 40px"
+                      className="object-contain group-hover:scale-110 transition-transform duration-300"
+                    />
                 </div>
                 <div className="hidden sm:block">
                   <h1 className={`text-lg lg:text-xl font-bold transition-colors duration-300 ${
@@ -237,12 +238,13 @@ export function ModernNavigation() {
                 <div className="flex items-center justify-between mb-8 pb-6 border-b border-gray-200/50">
                   <div className="flex items-center gap-3">
                     <div className="relative w-10 h-10">
-                      <Image
-                        src="/logo.png"
-                        alt="Houze Master"
-                        fill
-                        className="object-contain"
-                      />
+                        <Image
+                          src="/logo.png"
+                          alt="Houze Master"
+                          fill
+                          sizes="40px"
+                          className="object-contain"
+                        />
                     </div>
                     <div>
                       <h2 className="text-lg font-bold text-gray-900">Houze Master</h2>
