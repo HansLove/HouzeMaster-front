@@ -53,9 +53,9 @@ export function ModernNavigation() {
 
   const navItems = [
     { name: 'Home', href: '/', icon: Home },
-    { name: 'Properties', href: '/listings', icon: Building2 },
-    { name: 'About', href: '/about', icon: Building2 },
-    { name: 'Contact', href: '/contact', icon: Phone },
+    { name: 'Why Houze Master', href: '#why-houze-master', icon: Building2 },
+    { name: 'Payment Options', href: '#payment-options', icon: Phone },
+    { name: 'Tokenization', href: '#tokenization', icon: Building2 },
   ];
 
   return (
@@ -85,15 +85,14 @@ export function ModernNavigation() {
               </div>
               <div className="hidden md:block">
                 <h1 className={`text-xl font-bold transition-colors duration-300 ${
-                  // isScrolled ? 'text-gray-900' : 'text-white'
-                  isScrolled ? 'text-gray-900' : 'text-gray-400'
+                  isScrolled ? 'text-gray-900' : 'text-white'
                 }`}>
-                  Taloon Studio
+                  Houze Master
                 </h1>
                 <p className={`text-sm transition-colors duration-300 ${
                   isScrolled ? 'text-gray-600' : 'text-gray-300'
                 }`}>
-                  Premium Real Estate
+                  Land Investment & Tokenization
                 </p>
               </div>
             </Link>
@@ -118,16 +117,16 @@ export function ModernNavigation() {
 
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center gap-4">
-              <Link
-                href="/contact"
+              <button
+                onClick={() => window.open('https://wa.me/527223493064', '_blank')}
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-200 ${
                   isScrolled
-                    ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl'
-                    : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
+                    ? 'bg-green-600 text-white hover:bg-green-700 shadow-lg hover:shadow-xl'
+                    : 'bg-green-600/90 text-white hover:bg-green-700 backdrop-blur-sm'
                 }`}
               >
-                Get Started
-              </Link>
+                WhatsApp
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -176,8 +175,8 @@ export function ModernNavigation() {
                       />
                     </div>
                     <div>
-                      <h2 className="text-lg font-bold text-gray-900">Taloon Studio</h2>
-                      <p className="text-sm text-gray-600">Premium Real Estate</p>
+                      <h2 className="text-lg font-bold text-gray-900">Houze Master</h2>
+                      <p className="text-sm text-gray-600">Land Investment & Tokenization</p>
                     </div>
                   </div>
                   <button
@@ -215,25 +214,27 @@ export function ModernNavigation() {
                   <h3 className="text-sm font-semibold text-gray-900 mb-4">Contact Us</h3>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3 text-gray-600">
-                      <Phone className="w-4 h-4 text-blue-600" />
-                      <span className="text-sm">+52 998 123 4567</span>
+                      <Phone className="w-4 h-4 text-green-600" />
+                      <span className="text-sm">+52 722 349 3064</span>
                     </div>
                     <div className="flex items-center gap-3 text-gray-600">
-                      <Mail className="w-4 h-4 text-blue-600" />
-                      <span className="text-sm">info@taloonstudio.com</span>
+                      <Mail className="w-4 h-4 text-green-600" />
+                      <span className="text-sm">WhatsApp Available</span>
                     </div>
                   </div>
                 </div>
 
                 {/* CTA Button */}
                 <div className="mt-8">
-                  <Link
-                    href="/contact"
-                    onClick={() => setIsOpen(false)}
-                    className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 px-6 rounded-xl font-semibold text-center block hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-lg"
+                  <button
+                    onClick={() => {
+                      window.open('https://wa.me/527223493064', '_blank');
+                      setIsOpen(false);
+                    }}
+                    className="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-3 px-6 rounded-xl font-semibold text-center block hover:from-green-700 hover:to-green-800 transition-all duration-200 shadow-lg"
                   >
-                    Get Started
-                  </Link>
+                    Contact via WhatsApp
+                  </button>
                 </div>
               </div>
             </div>

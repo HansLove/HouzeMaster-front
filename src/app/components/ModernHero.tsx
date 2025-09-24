@@ -1,14 +1,10 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
-import { Search, MapPin, Home, DollarSign } from 'lucide-react';
-import { useState } from 'react';
+import { MessageCircle, DollarSign, Shield, Zap, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export function ModernHero() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCity, setSelectedCity] = useState('');
-  const [selectedType, setSelectedType] = useState('');
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -20,7 +16,7 @@ export function ModernHero() {
     },
   };
 
-  const itemVariants:Variants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -32,7 +28,7 @@ export function ModernHero() {
     },
   };
 
-  const floatingVariants:Variants = {
+  const floatingVariants: Variants = {
     float: {
       y: [-10, 10, -10],
       transition: {
@@ -41,6 +37,10 @@ export function ModernHero() {
         ease: "easeInOut",
       },
     },
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/527223493064', '_blank');
   };
 
   return (
@@ -83,87 +83,67 @@ export function ModernHero() {
             variants={itemVariants}
             className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           >
-            Discover Your
+            Land Investment
             <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
-              Dream Home
+              Starting at 450K MXN
             </span>
           </motion.h1>
 
           {/* Subtitle */}
           <motion.p
             variants={itemVariants}
-            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Experience luxury real estate in the most beautiful locations. 
-            Find your perfect property with our curated collection of premium homes.
+            Explore land investment opportunities with flexible payment options. 
+            We help you explore possibilities with traditional payments, Bitcoin, and USDT.
           </motion.p>
 
-          {/* Search Section */}
+          {/* Price Highlight */}
           <motion.div
             variants={itemVariants}
-            className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl"
+            className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl mb-12"
           >
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              {/* Search Input */}
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search properties..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-4 bg-white/90 backdrop-blur-sm rounded-2xl border-0 text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-200"
-                />
-              </div>
-
-              {/* City Selector */}
-              <div className="relative">
-                <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <select
-                  value={selectedCity}
-                  onChange={(e) => setSelectedCity(e.target.value)}
-                  className="w-full pl-10 pr-4 py-4 bg-white/90 backdrop-blur-sm rounded-2xl border-0 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-200 appearance-none cursor-pointer"
-                >
-                  <option value="">All Cities</option>
-                  <option value="cancun">Cancún</option>
-                  <option value="tulum">Tulum</option>
-                  <option value="playa">Playa del Carmen</option>
-                  <option value="merida">Mérida</option>
-                </select>
-              </div>
-
-              {/* Property Type */}
-              <div className="relative">
-                <Home className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <select
-                  value={selectedType}
-                  onChange={(e) => setSelectedType(e.target.value)}
-                  className="w-full pl-10 pr-4 py-4 bg-white/90 backdrop-blur-sm rounded-2xl border-0 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-200 appearance-none cursor-pointer"
-                >
-                  <option value="">All Types</option>
-                  <option value="house">House</option>
-                  <option value="apartment">Apartment</option>
-                  <option value="villa">Villa</option>
-                  <option value="penthouse">Penthouse</option>
-                </select>
-              </div>
-
-              {/* Search Button */}
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white py-4 px-8 rounded-2xl font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
-              >
-                <Search className="w-5 h-5" />
-                Search
-              </motion.button>
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <DollarSign className="w-8 h-8 text-green-400" />
+              <h2 className="text-3xl font-bold text-white">Price Transparency</h2>
             </div>
+            <p className="text-xl text-gray-300 mb-6">
+              Lots available starting from <span className="text-green-400 font-bold text-2xl">450K MXN</span>
+            </p>
+            <p className="text-gray-400">
+              Clear pricing with no hidden fees. Explore available lots and payment options.
+            </p>
           </motion.div>
 
-          {/* Stats */}
+          {/* CTA Section */}
           <motion.div
             variants={itemVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={handleWhatsAppClick}
+              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white py-4 px-8 rounded-2xl font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-3"
+            >
+              <MessageCircle className="w-6 h-6" />
+              Contact via WhatsApp
+              <ArrowRight className="w-5 h-5" />
+            </motion.button>
+            
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white/20 hover:bg-white/30 text-white py-4 px-8 rounded-2xl font-semibold text-lg transition-all duration-200 backdrop-blur-sm border border-white/30"
+            >
+              Explore Payment Options
+            </motion.button>
+          </motion.div>
+
+          {/* Key Features */}
+          <motion.div
+            variants={itemVariants}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
             <div className="text-center">
               <motion.div
@@ -172,10 +152,10 @@ export function ModernHero() {
                 transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
                 className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"
               >
-                <Home className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white" />
               </motion.div>
-              <h3 className="text-3xl font-bold text-white mb-2">500+</h3>
-              <p className="text-gray-300">Premium Properties</p>
+              <h3 className="text-xl font-bold text-white mb-2">Trust & Security</h3>
+              <p className="text-gray-300">Professional, legal, and secure transactions</p>
             </div>
 
             <div className="text-center">
@@ -185,10 +165,10 @@ export function ModernHero() {
                 transition={{ delay: 1, type: "spring", stiffness: 200 }}
                 className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"
               >
-                <MapPin className="w-8 h-8 text-white" />
+                <DollarSign className="w-8 h-8 text-white" />
               </motion.div>
-              <h3 className="text-3xl font-bold text-white mb-2">25+</h3>
-              <p className="text-gray-300">Prime Locations</p>
+              <h3 className="text-xl font-bold text-white mb-2">Payment Flexibility</h3>
+              <p className="text-gray-300">MXN, Bitcoin, and USDT options available</p>
             </div>
 
             <div className="text-center">
@@ -198,10 +178,10 @@ export function ModernHero() {
                 transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
                 className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"
               >
-                <DollarSign className="w-8 h-8 text-white" />
+                <Zap className="w-8 h-8 text-white" />
               </motion.div>
-              <h3 className="text-3xl font-bold text-white mb-2">1000+</h3>
-              <p className="text-gray-300">Happy Clients</p>
+              <h3 className="text-xl font-bold text-white mb-2">Innovation</h3>
+              <p className="text-gray-300">Explore property tokenization possibilities</p>
             </div>
           </motion.div>
         </motion.div>

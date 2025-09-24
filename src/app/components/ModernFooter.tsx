@@ -2,7 +2,7 @@
 
 import { motion, Variants } from 'framer-motion';
 import { 
-  MapPin, 
+  // MapPin, 
   Phone, 
   Mail, 
   Clock, 
@@ -11,7 +11,8 @@ import {
   Twitter, 
   Linkedin,
   ArrowUp,
-  Heart
+  Heart,
+  MessageCircle
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -56,20 +57,18 @@ export function ModernFooter() {
 
   const footerLinks = {
     company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Press', href: '/press' },
+      { name: 'Why Houze Master', href: '#why-houze-master' },
+      { name: 'Payment Options', href: '#payment-options' },
+      { name: 'Tokenization', href: '#tokenization' },
     ],
     services: [
-      { name: 'Buy Property', href: '/buy' },
-      { name: 'Sell Property', href: '/sell' },
-      { name: 'Rent Property', href: '/rent' },
-      { name: 'Property Management', href: '/management' },
+      { name: 'Land Investment', href: '#why-houze-master' },
+      { name: 'Bitcoin Payments', href: '#payment-options' },
+      { name: 'USDT Payments', href: '#payment-options' },
+      { name: 'Property Tokenization', href: '#tokenization' },
     ],
     support: [
-      { name: 'Help Center', href: '/help' },
-      { name: 'Contact Support', href: '/support' },
+      { name: 'WhatsApp Contact', href: 'https://wa.me/527223493064' },
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
     ],
@@ -110,14 +109,14 @@ export function ModernFooter() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">Taloon Studio</h3>
-                  <p className="text-gray-400 text-sm">Premium Real Estate</p>
+                  <h3 className="text-xl font-bold">Houze Master</h3>
+                  <p className="text-gray-400 text-sm">Land Investment & Tokenization</p>
                 </div>
               </div>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Experience luxury real estate in the most beautiful locations. 
-                We specialize in premium properties that exceed expectations.
+                Explore land investment opportunities starting from 450K MXN. 
+                We provide flexible payment options and guidance on property tokenization.
               </p>
 
               {/* Social Links */}
@@ -174,29 +173,19 @@ export function ModernFooter() {
             <motion.div variants={itemVariants}>
               <h4 className="text-lg font-semibold mb-6 text-white">Contact Info</h4>
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="text-gray-300 text-sm">
-                      Av. Tulum, Cancún<br />
-                      Quintana Roo, México
-                    </p>
-                  </div>
+                <div className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300 text-sm">+52 722 349 3064</span>
                 </div>
                 
                 <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-blue-400" />
-                  <span className="text-gray-300 text-sm">+52 998 123 4567</span>
+                  <Mail className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300 text-sm">WhatsApp Available</span>
                 </div>
                 
                 <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-blue-400" />
-                  <span className="text-gray-300 text-sm">info@taloonstudio.com</span>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-blue-400" />
-                  <span className="text-gray-300 text-sm">Mon - Fri: 9AM - 6PM</span>
+                  <Clock className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300 text-sm">Professional Guidance</span>
                 </div>
               </div>
             </motion.div>
@@ -213,25 +202,20 @@ export function ModernFooter() {
         >
           <div className="container mx-auto px-4 py-12">
             <div className="text-center max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
+              <h3 className="text-2xl font-bold mb-4">Ready to Explore Land Investment?</h3>
               <p className="text-gray-300 mb-6">
-                Subscribe to our newsletter for the latest property updates and exclusive offers.
+                Contact us via WhatsApp to discuss available lots and payment options.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-200"
-                />
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
-                  Subscribe
-                </motion.button>
-              </div>
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => window.open('https://wa.me/527223493064', '_blank')}
+                className="px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-3 mx-auto"
+              >
+                <MessageCircle className="w-6 h-6" />
+                Contact via WhatsApp
+              </motion.button>
             </div>
           </div>
         </motion.div>
@@ -241,7 +225,7 @@ export function ModernFooter() {
           <div className="container mx-auto px-4 py-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-2 text-gray-400 text-sm">
-                <span>© 2024 Taloon Studio. Made with</span>
+                <span>© 2024 Houze Master. Made with</span>
                 <Heart className="w-4 h-4 text-red-500 fill-current" />
                 <span>in México</span>
               </div>

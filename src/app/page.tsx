@@ -1,14 +1,18 @@
 import { ModernHero } from './components/ModernHero';
-import { ModernListings } from './components/ModernListings';
 import { ModernNavigation } from './components/ModernNavigation';
 import { ModernFooter } from './components/ModernFooter';
+import { WhyHouzeMaster } from './components/WhyHouzeMaster';
+import { PaymentOptions } from './components/PaymentOptions';
+import { TokenizationSection } from './components/TokenizationSection';
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <ModernNavigation />
       <ModernHero />
-      <ModernListings />
+      <WhyHouzeMaster />
+      <PaymentOptions />
+      <TokenizationSection />
       <ModernFooter />
     </main>
   );
