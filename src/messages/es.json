@@ -68,7 +68,10 @@
     "usdtPayment": "Pago en USDT",
     "usdtPaymentDesc": "USDT como opción estable para pagos en criptomonedas",
     "learnMore": "Aprender Más",
-    "contactForDetails": "Contactar para Detalles"
+    "contactForDetails": "Contactar para Detalles",
+    "readyToExplorePaymentOptions": "¿Listo para explorar tus opciones de pago?",
+    "propertyTokenization": "Tokenización de Propiedades",
+    "cryptocurrencyPayments": "Pagos en Criptomonedas"
   },
   "tokenization": {
     "title": "Tokenización de Propiedades",
@@ -86,7 +89,8 @@
       "transparencyDesc": "Todas las transacciones se registran en blockchain"
     },
     "exploreTokenization": "Explorar Tokenización",
-    "getInTouch": "Ponte en Contacto"
+    "getInTouch": "Ponte en Contacto",
+    "interestedInTokenization": "¿Interesado en la tokenización?"
   },
   "footer": {
     "companyDescription": "Houze Master es tu socio confiable en inversión de terrenos y tokenización de propiedades en México.",

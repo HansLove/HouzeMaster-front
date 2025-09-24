@@ -91,17 +91,17 @@ export function ModernFooter() {
               </li>
               <li>
                 <Link href="#why-houze-master" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  Por Qué Nosotros
+                  {t('whyUs')}
                 </Link>
               </li>
               <li>
                 <Link href="#payment-options" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  Opciones de Pago
+                  {t('payments')}
                 </Link>
               </li>
               <li>
                 <Link href="#tokenization" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  Tokenización
+                  {t('tokenization')}
                 </Link>
               </li>
             </ul>
@@ -116,10 +116,10 @@ export function ModernFooter() {
           >
             <h4 className="text-xl font-bold mb-6">{t('services')}</h4>
             <ul className="space-y-3">
-              <li className="text-gray-300">Inversión en Terrenos</li>
-              <li className="text-gray-300">Tokenización de Propiedades</li>
-              <li className="text-gray-300">Pagos en Criptomonedas</li>
-              <li className="text-gray-300">Asesoría Profesional</li>
+              <li className="text-gray-300">{t('landInvestment')}</li>
+              <li className="text-gray-300">{t('propertyTokenization')}</li>
+              <li className="text-gray-300">{t('cryptocurrencyPayments')}</li>
+              <li className="text-gray-300">{t('professionalGuidance')}</li>
             </ul>
           </motion.div>
 

@@ -126,7 +126,7 @@ export function PaymentOptions() {
             className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-8 md:p-12 text-center text-white"
           >
             <h3 className="text-3xl font-bold mb-6">
-              ¿Listo para explorar tus opciones de pago?
+              {t('readyToExplorePaymentOptions')}
             </h3>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               {t('contactForDetails')}

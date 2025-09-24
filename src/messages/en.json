@@ -68,7 +68,10 @@
     "usdtPayment": "USDT Payment",
     "usdtPaymentDesc": "USDT as a stable option for cryptocurrency payments",
     "learnMore": "Learn More",
-    "contactForDetails": "Contact for Details"
+    "contactForDetails": "Contact for Details",
+    "readyToExplorePaymentOptions": "Ready to explore your payment options?",
+    "propertyTokenization": "Property Tokenization",
+    "cryptocurrencyPayments": "Cryptocurrency Payments"
   },
   "tokenization": {
     "title": "Property Tokenization",
@@ -86,7 +89,8 @@
       "transparencyDesc": "All transactions are recorded on blockchain"
     },
     "exploreTokenization": "Explore Tokenization",
-    "getInTouch": "Get in Touch"
+    "getInTouch": "Get in Touch",
+    "interestedInTokenization": "Interested in tokenization?"
   },
   "footer": {
     "companyDescription": "Houze Master is your trusted partner in land investment and property tokenization in Mexico.",
