@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
-import { Zap, Shield, TrendingUp, Users, MessageCircle, ArrowRight, CheckCircle, Lightbulb } from 'lucide-react';
+import { Shield, TrendingUp, MessageCircle, ArrowRight, CheckCircle, Lightbulb } from 'lucide-react';
 
 export function TokenizationSection() {
   const containerVariants = {
@@ -201,7 +201,7 @@ export function TokenizationSection() {
                 
                 <div className="space-y-4 text-gray-600">
                   <p>
-                    <strong>No Guarantees:</strong> We don't promise guaranteed returns. 
+                    <strong>No Guarantees:</strong> We don&apos;t promise guaranteed returns. 
                     Tokenization involves exploring possibilities and potential benefits.
                   </p>
                   <p>
@@ -210,7 +210,7 @@ export function TokenizationSection() {
                   </p>
                   <p>
                     <strong>Clear Communication:</strong> We explain benefits without exaggeration, 
-                    focusing on what's possible rather than what's guaranteed.
+                    focusing on what&apos;s possible rather than what&apos;s guaranteed.
                   </p>
                 </div>
               </div>
@@ -228,7 +228,7 @@ export function TokenizationSection() {
               </h3>
               <p className="text-xl mb-8 text-purple-100 max-w-3xl mx-auto">
                 Contact us to discuss how property tokenization might work for your land investment. 
-                We'll help you explore the options available and guide you through the possibilities.
+                We&apos;ll help you explore the options available and guide you through the possibilities.
               </p>
               
               <motion.button
