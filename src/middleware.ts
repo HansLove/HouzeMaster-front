@@ -1,26 +1,17 @@
+// middleware.ts
 import createMiddleware from 'next-intl/middleware';
 import { locales } from './i18n';
 
 export default createMiddleware({
-  // A list of all locales that are supported
-  locales: locales,
-
-  // Used when no locale matches
+  locales,
   defaultLocale: 'es',
-
-  // Only show locale prefix when needed (not for default locale)
   localePrefix: 'as-needed',
-  
-  // Enable automatic locale detection
   localeDetection: true
 });
 
 export const config = {
-  // Match only internationalized pathnames
   matcher: [
-    // Match all pathnames except for
-    // - … if they start with `/api`, `/_next` or `/_vercel`
-    // - … the ones containing a dot (e.g. `favicon.ico`)
-    '/((?!api|_next|_vercel|.*\\..*).*)'
+    // Aplica i18n a todo, EXCEPTO a estas rutas:
+    '/((?!plano|api|assets|_next/static|_next/image|favicon.ico|.*\\..*).*)',
   ]
 };
